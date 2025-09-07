@@ -1,5 +1,6 @@
-# Mermaid Diagrams: Zero-to-Perfect Testing Workflow## 1. Overall Workflow - High-Level Process```mermaid
+# Mermaid Diagrams: Zero-to-Perfect Testing Workflow## 1. Overall Workflow - High-Level Process
 
+```mermaid
 flowchart TD
 A[Start: 0% Test Coverage] --> B[Phase 1: Code Cleanup Pipeline]
 B --> C[Phase 2: Critical Unit Analysis]
@@ -21,10 +22,11 @@ F -->|Yes| H[Phase 5: Perfect Testing Achieved]
     D -.-> D1
     E -.-> E1
     F -.-> F1
+```
 
-````
+## 2. Code Cleanup Pipeline - Why Order Matters
 
-## 2. Code Cleanup Pipeline - Why Order Matters```mermaid
+```mermaid
 flowchart LR
     A[Format Code] --> B[Remove Dead Code] --> C[Fix Linting] --> D[Measure Complexity] --> E[Detect Duplication]
 
@@ -49,10 +51,11 @@ flowchart LR
             N1[Standard --fix] --> N2[Unimported] --> N3[Standard] --> N4[Codehawk] --> N5[CPD JavaScript]
         end
     end
-````
+```
 
-## 3. Critical Unit Selection - Strategic Prioritization```mermaid
+## 3. Critical Unit Selection - Strategic Prioritization
 
+```mermaid
 flowchart TD
 A[Load Analysis Reports] --> B[Calculate Criticality Scores]
 B --> C{High Complexity?}
@@ -81,9 +84,11 @@ C -->|No| E[+0 Priority Points]
     B -.-> B1
     M -.-> M1
 
-````
+```
 
-## 4. Mutation-First Testing Loop - The Core Innovation```mermaid
+## 4. Mutation-First Testing Loop - The Core Innovation
+
+```mermaid
 flowchart TD
     A[Select Next Critical Unit] --> B[Run Mutation Testing]
     B --> C[100% Mutant Survival Expected]
@@ -124,9 +129,11 @@ flowchart TD
     F -.-> F1
     J -.-> J1
     N -.-> N1
-````
+```
 
-## 5. Mutant Business Relevance Decision Tree```mermaid
+## 5. Mutant Business Relevance Decision Tree
+
+```mermaid
 
 flowchart TD
 A[Surviving Mutant] --> B{Mutation Type?}
@@ -167,9 +174,11 @@ A[Surviving Mutant] --> B{Mutation Type?}
     P -.-> P1
     Q -.-> Q1
 
-````
+```
 
-## 6. Quality Gates and Success Criteria```mermaid
+## 6. Quality Gates and Success Criteria
+
+```mermaid
 flowchart TD
     A[Run Quality Assessment] --> B{Mutation Score ≥ 80%?}
     B -->|No| C[Analyze Surviving Mutants]
@@ -206,7 +215,7 @@ flowchart TD
     D -.-> D1
     I -.-> I1
     L -.-> L1
-````
+```
 
 ## Key Workflow Justifications**Sequential Dependencies**: Each phase builds on the previous one. Clean code enables accurate analysis, accurate analysis identifies critical testing targets, and mutation testing validates that tests are meaningful
 
